@@ -32,6 +32,7 @@ app.get('/attractions', (req, res) => {
         .then((result) => {
             const rows = result.rows;
             console.log('ข้อมูลที่ได้:', rows);
+            res.send(rows);
         })
         .catch((err) => {
             console.error('ไม่สามารถดึงข้อมูลจากตารางได้:', err.message);
